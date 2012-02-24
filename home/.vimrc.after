@@ -1,0 +1,45 @@
+"color default
+"color railscasts
+"set background=light
+"
+"
+" new background
+syntax enable
+" solarized options 
+set background=dark
+"let g:solarized_termcolors = 256 
+"let g:solarized_visibility = "high" 
+"let g:solarized_contrast = "high" 
+colorscheme solarized
+"set background=dark
+"set noballooneval
+"set guioptions-=T
+
+au BufRead,BufNewFile *.php set filetype=php.html
+au BufRead,BufNewFile *.phtml set filetype=php.html
+au BufRead,BufNewFile *.tpl set filetype=php.html
+au BufRead,BufNewFile *.erb set filetype=eruby.html
+au BufRead,BufNewFile *.scss set filetype=scss
+set autoread
+
+":let g:closetag_html_style=1
+":source ~/.vim/scripts/closetag.vim
+map <leader>c :ColorHEX<cr>
+let g:NERDTreeMouseMode=1
+map <leader>v ^vg_
+map <leader>pp ^vg_s<p><cr>
+map <leader>li ^vg_s<li><cr>
+map <leader>s :Gstatus<cr>
+map! <leader>sp &nbsp;
+
+map <leader>notes :new ~/websites/brownwebdesign.com/notes/views/index.markdown<cr>
+
+"Markdown to HTML
+nmap <leader>md :%!/usr/local/bin/Markdown.pl --html4tags <cr>
+"imap <F8> <ESC>:w!<CR>:!markdown % \| smartypants > %.html && open %.html<CR><CR>a
+"
+"
+" jess is commenting out to see what this even does--set guioptions=aAce
+
+" toggle for vim room (minimal writer)
+map <Leader>mz :VimroomToggle<cr>
