@@ -9,6 +9,8 @@ alias gac="git add .; git commit -m "
 alias git=hub
 alias markdown="/usr/local/bin/Markdown.pl"
 alias be="bundle exec"
+alias tn="tmux new -s"
+alias ta="tmux attach -t"
 
 #switch things in terminal
 export HISTIGNORE="fg*"
