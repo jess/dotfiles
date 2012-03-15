@@ -43,3 +43,6 @@
 [submodule "home/.janus/vimroom"]
 	path = home/.janus/vimroom
 	url = https://github.com/mikewest/vimroom.git
+[submodule "home/.janus/unimpaired"]
+	path = home/.janus/unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
