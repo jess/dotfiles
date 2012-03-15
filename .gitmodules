@@ -1,3 +1,6 @@
 [submodule "home/.janus/apidock.vim"]
 	path = home/.janus/apidock.vim
 	url = https://github.com/mileszs/apidock.vim.git
+[submodule "home/.janus/proj-vim"]
+	path = home/.janus/proj-vim
+	url = https://github.com/tmallen/proj-vim.git
