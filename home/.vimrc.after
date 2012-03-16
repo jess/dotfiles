@@ -20,6 +20,7 @@ au BufRead,BufNewFile *.phtml set filetype=php.html
 au BufRead,BufNewFile *.tpl set filetype=php.html
 au BufRead,BufNewFile *.erb set filetype=eruby.html
 au BufRead,BufNewFile *.scss set filetype=scss
+au BufRead,BufNewFile *_spec.rb set filetype=ruby.ruby-rspec
 set autoread
 
 ":let g:closetag_html_style=1
@@ -43,3 +44,15 @@ nmap <leader>md :%!/usr/local/bin/Markdown.pl --html4tags <cr>
 
 " toggle for vim room (minimal writer)
 map <Leader>mz :VimroomToggle<cr>
+
+
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+" 
+" Bubble single lines
+nmap <S-Up> [e
+nmap <S-Down> ]e
+" Bubble multiple lines
+vmap <S-Up> [egv
+vmap <S-Down> ]egv
