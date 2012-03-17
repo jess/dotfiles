@@ -51,8 +51,14 @@ set pastetoggle=<F2>
 set showmode
 " 
 " Bubble single lines
-nmap <S-Up> [e
-nmap <S-Down> ]e
+"nmap <S-Up> [e
+"nmap <S-Down> ]e
+nmap <Esc>A [e
+nmap <Esc>B ]
 " Bubble multiple lines
-vmap <S-Up> [egv
-vmap <S-Down> ]egv
+"vmap <S-Up> [egv
+"vmap <S-Down> ]egv
+vmap <Esc>A [egv
+vmap <Esc>B ]egv
+
+set clipboard=unnamed
