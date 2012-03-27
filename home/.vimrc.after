@@ -54,7 +54,7 @@ set showmode
 "nmap <S-Up> [e
 "nmap <S-Down> ]e
 nmap <Esc>A [e
-nmap <Esc>B ]
+nmap <Esc>B ]e
 " Bubble multiple lines
 "vmap <S-Up> [egv
 "vmap <S-Down> ]egv
