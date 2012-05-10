@@ -46,3 +46,6 @@
 [submodule "home/.janus/unimpaired"]
 	path = home/.janus/unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "home/.janus/hammer.vim"]
+	path = home/.janus/hammer.vim
+	url = https://github.com/matthias-guenther/hammer.vim.git

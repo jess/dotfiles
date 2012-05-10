@@ -28,15 +28,18 @@ set autoread
 map <leader>c :ColorHEX<cr>
 let g:NERDTreeMouseMode=1
 map <leader>v ^vg_
-map <leader>pp ^vg_s<p><cr>
-map <leader>li ^vg_s<li><cr>
+map <leader>pp ^vg_S<p><cr>
+map <leader>li ^vg_S<li><cr>
 map <leader>s :Gstatus<cr>
 map! <leader>sp &nbsp;
 
-map <leader>notes :new ~/websites/brownwebdesign.com/notes/views/index.markdown<cr>
+map <leader>notes :tabedit ~/websites/brownwebdesign.com/notes/views/index.markdown<cr>
+map <leader>tasks :tabedit ~/Dropbox/tasks/bwd.taskpaper<cr>
 
 "Markdown to HTML
 nmap <leader>md :%!/usr/local/bin/Markdown.pl --html4tags <cr>
+map <leader>mds :!/usr/local/bin/Markdown.pl --html4tags <cr>
+map <leader>nb y:tabedit/tmp/%<cr>p:set ft=html<cr>:%!/usr/local/bin/Markdown.pl --html4tags <cr>ggVG"*y
 "imap <F8> <ESC>:w!<CR>:!markdown % \| smartypants > %.html && open %.html<CR><CR>a
 "
 "
@@ -61,4 +64,7 @@ nmap <Esc>B ]e
 vmap <Esc>A [egv
 vmap <Esc>B ]egv
 
-set clipboard=unnamed
+"set clipboard=unnamed
+nnoremap gm :call cursor(0, len(getline('.'))/2)<cr>
+
+
