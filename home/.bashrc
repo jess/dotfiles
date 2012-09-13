@@ -9,3 +9,5 @@ vim()
 {
   (unset GEM_PATH GEM_HOME; command vim "$@")
 }
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

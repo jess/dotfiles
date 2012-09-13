@@ -37,9 +37,12 @@ map <leader>notes :tabedit ~/websites/brownwebdesign.com/notes/views/index.markd
 map <leader>tasks :tabedit ~/Dropbox/tasks/bwd.taskpaper<cr>
 
 "Markdown to HTML
+" Convert whole page to markdown in place
 nmap <leader>md :%!/usr/local/bin/Markdown.pl --html4tags <cr>
-map <leader>mds :!/usr/local/bin/Markdown.pl --html4tags <cr>
-map <leader>nb y:tabedit/tmp/%<cr>p:set ft=html<cr>:%!/usr/local/bin/Markdown.pl --html4tags <cr>ggVG"*y
+" Markdown save: Convert whole page, save as filename.html
+nmap <leader>mds :%!/usr/local/bin/Markdown.pl --html4tags <cr>:saveas %.html<cr>
+" Markdown copy:  Convert selection, open new page, copy html into mac buffer
+map <leader>mdc y:tabedit/tmp/%<cr>p:set ft=html<cr>:%!/usr/local/bin/Markdown.pl --html4tags <cr>ggVG"*y
 "imap <F8> <ESC>:w!<CR>:!markdown % \| smartypants > %.html && open %.html<CR><CR>a
 "
 "
@@ -48,6 +51,8 @@ map <leader>nb y:tabedit/tmp/%<cr>p:set ft=html<cr>:%!/usr/local/bin/Markdown.pl
 " toggle for vim room (minimal writer)
 map <Leader>mz :VimroomToggle<cr>
 
+map <Leader>y "*y
+map <Leader>p "*p
 
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>

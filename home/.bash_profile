@@ -2,15 +2,21 @@ alias ll="ls -la"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+# git
 alias gs="git status"
 alias gc="git commit -m"
 alias ga="git add ."
-alias gac="git add .; git commit -m "
+alias gac="git add -A; git commit -m "
+alias gsummary='git log --pretty=format:"%h - %an, %ar : %s"'
+
+alias rdbm="bundle exec rake db:migrate db:test:prepare"
 alias git=hub
 alias markdown="/usr/local/bin/Markdown.pl"
 alias be="bundle exec"
 alias tn="tmux new -s"
 alias ta="tmux attach -t"
+alias tk="tmux kill-session -t"
+alias tls="tmux ls"
 
 #switch things in terminal
 export HISTIGNORE="fg*"
