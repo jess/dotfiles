@@ -72,4 +72,6 @@ vmap <Esc>B ]egv
 "set clipboard=unnamed
 nnoremap gm :call cursor(0, len(getline('.'))/2)<cr>
 
-
+" Terminal Mouse
+set mouse=a
+set ttym=xterm2

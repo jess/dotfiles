@@ -48,6 +48,15 @@ function define_vim_wrappers()
     done
 }
 
+
+vim()
+{
+    (unset GEM_PATH GEM_HOME; command vim "$@")
+}
+
 #define_vim_wrappers
 
 #echo "Jess is Cool.  Jesus loves you too!"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
