@@ -25,9 +25,22 @@ bind '"\C-f": "fg %-\n"'
 export EDITOR="vim"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+
+
 #show rvm and get in command line
-if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then source `brew --prefix`/etc/bash_completion.d/git-completion.bash; fi # for Git completion
+
+## from output
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+. $(brew --prefix)/etc/bash_completion
+fi
+
+
+#if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then source `brew --prefix`/etc/bash_completion.d/git-completion.bash; fi # for Git completion
+
 export PS1="\H \[\033[01;34m\]\$(~/.rvm/bin/rvm-prompt) \[\033[01;32m\]\w\[\033[00;33m\]\$(__git_ps1 \" (%s)\") \[\033[01;36m\]\$\[\033[00m\] "
+
+
 
 # Define Vim wrappers which unsets GEM_HOME and GEM_PATH before
 # invoking vim and all known aliases
@@ -51,3 +64,6 @@ function define_vim_wrappers()
 #define_vim_wrappers
 
 #echo "Jess is Cool.  Jesus loves you too!"
+
+
+

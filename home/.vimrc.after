@@ -57,17 +57,18 @@ map <Leader>p "*p
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
-" 
+
 " Bubble single lines
 "nmap <S-Up> [e
 "nmap <S-Down> ]e
 nmap <Esc>A [e
 nmap <Esc>B ]e
+
 " Bubble multiple lines
 "vmap <S-Up> [egv
 "vmap <S-Down> ]egv
-vmap <Esc>A [egv
 vmap <Esc>B ]egv
+vmap <Esc>A [egv
 
 "set clipboard=unnamed
 nnoremap gm :call cursor(0, len(getline('.'))/2)<cr>
