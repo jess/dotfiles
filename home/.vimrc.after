@@ -11,11 +11,11 @@ set background=dark
 "let g:solarized_visibility = "high" 
 "let g:solarized_contrast = "high" 
 colorscheme solarized
-"set background=dark
 "set noballooneval
 "set guioptions-=T
 
 au BufRead,BufNewFile *.php set filetype=php.html
+au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.phtml set filetype=php.html
 au BufRead,BufNewFile *.tpl set filetype=php.html
 au BufRead,BufNewFile *.erb set filetype=eruby.html
@@ -76,3 +76,15 @@ nnoremap gm :call cursor(0, len(getline('.'))/2)<cr>
 " Terminal Mouse
 set mouse=a
 set ttym=xterm2
+
+
+" Vim Status bar
+if janus#is_plugin_enabled('fugitive')  
+  set statusline+=%{fugitive#statusline()}  
+endif  
+
+if janus#is_plugin_enabled('syntastic')
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+endif
