@@ -10,6 +10,7 @@ alias gac="git add -A; git commit -m "
 alias gsummary='git log --pretty=format:"%h - %an, %ar : %s"'
 
 alias rdbm="bundle exec rake db:migrate db:test:prepare"
+alias hrdbm="heroku run rake db:migrate"
 alias git=hub
 alias markdown="/usr/local/bin/Markdown.pl"
 alias be="bundle exec"
@@ -17,6 +18,9 @@ alias tn="tmux new -s"
 alias ta="tmux attach -t"
 alias tk="tmux kill-session -t"
 alias tls="tmux ls"
+
+alias ss="vim ~/Dropbox/notes/sunday_school"
+
 
 #switch things in terminal
 export HISTIGNORE="fg*"
@@ -64,3 +68,8 @@ vim()
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+
+### Ruby performance
+export RUBY_GC_MALLOC_LIMIT=60000000
+export RUBY_FREE_MIN=200000

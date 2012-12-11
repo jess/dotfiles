@@ -14,8 +14,12 @@ colorscheme solarized
 "set noballooneval
 "set guioptions-=T
 
+" Esc Key Re map
+inoremap jj <Esc>
+
+
 au BufRead,BufNewFile *.php set filetype=php.html
-au BufRead,BufNewFile *.md set filetype=markdown
+"au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.phtml set filetype=php.html
 au BufRead,BufNewFile *.tpl set filetype=php.html
 au BufRead,BufNewFile *.erb set filetype=eruby.html
@@ -78,13 +82,35 @@ set mouse=a
 set ttym=xterm2
 
 
-" Vim Status bar
-if janus#is_plugin_enabled('fugitive')  
-  set statusline+=%{fugitive#statusline()}  
-endif  
+" use the silver searcher instead of ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
-if janus#is_plugin_enabled('syntastic')
-  set statusline+=%#warningmsg#
-  set statusline+=%{SyntasticStatuslineFlag()}
-  set statusline+=%*
-endif
+
+" Vertical Lines Indentation
+let g:indent_guides_auto_colors = 0
+hi IndentGuidesOdd  ctermbg=black
+hi IndentGuidesEven ctermbg=black
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" RENAME CURRENT FILE (thanks Gary Bernhardt)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! RenameFile()
+    let old_name = expand('%')
+    let new_name = input('New file name: ', expand('%'), 'file')
+    if new_name != '' && new_name != old_name
+        exec ':saveas ' . new_name
+        exec ':silent !rm ' . old_name
+        redraw!
+    endif
+endfunction
+map <leader>rn :call RenameFile()<cr>
+
+
+" Turn on spell-checking in markdown and text.
+au BufRead,BufNewFile *.md,*.txt setlocal spell
+
+" Fuzzy finder: ignore stuff that can't be opened, and generated files
+let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
