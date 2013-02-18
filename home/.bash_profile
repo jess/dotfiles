@@ -7,9 +7,11 @@ alias gs="git status"
 alias gc="git commit -m"
 alias ga="git add ."
 alias gac="git add -A; git commit -m "
+alias gco="git checkout "
 alias gsummary='git log --pretty=format:"%h - %an, %ar : %s"'
 
 alias rdbm="bundle exec rake db:migrate db:test:prepare"
+alias ber="bundle exec rspec spec"
 alias hrdbm="heroku run rake db:migrate"
 alias git=hub
 alias markdown="/usr/local/bin/Markdown.pl"
