@@ -58,3 +58,6 @@
 [submodule "home/.janus/vim-indent-guides"]
 	path = home/.janus/vim-indent-guides
 	url = git://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "home/.janus/vim-slim"]
+	path = home/.janus/vim-slim
+	url = https://github.com/slim-template/vim-slim.git
