@@ -4,5 +4,3 @@ let mapleader=","
 "let g:snippets_dir="~/.janus/snippets/"
 call janus#disable_plugin('snipmate-snippets')
 call janus#disable_plugin('vimwiki')
-
-

@@ -4,13 +4,16 @@
 "
 "
 " new background
-syntax enable
+"syntax enable
+syntax on
 " solarized options 
 set background=dark
-"let g:solarized_termcolors = 256 
-"let g:solarized_visibility = "high" 
-"let g:solarized_contrast = "high" 
+"set t_Co=256
 colorscheme solarized
+"let g:solarized_termcolors=256
+"let g:solarized_visibility = "low" 
+"let g:solarized_contrast = "high" 
+"
 "set noballooneval
 "set guioptions-=T
 
