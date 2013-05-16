@@ -9,6 +9,7 @@ alias ga="git add ."
 alias gac="git add -A; git commit -m "
 alias gco="git checkout "
 alias gsummary='git log --pretty=format:"%h - %an, %ar : %s"'
+alias gcustomer='git log --pretty=format:"%s"'
 
 alias rdbm="bundle exec rake db:migrate db:test:prepare"
 alias ber="bundle exec rspec spec"
@@ -22,6 +23,7 @@ alias tk="tmux kill-session -t"
 alias tls="tmux ls"
 
 alias ss="vim ~/Dropbox/notes/sunday_school"
+alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
 
 
 #switch things in terminal

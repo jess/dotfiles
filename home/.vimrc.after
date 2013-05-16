@@ -44,6 +44,9 @@ map <leader>tasks :tabedit ~/Dropbox/tasks/bwd.taskpaper<cr>
 map <Leader>y "*y
 map <Leader>p "*p
 map <Leader>cao :tabonly<cr> :only<cr>
+map <Leader>nt :tabnew<cr>
+" Ctrl v to paste whil in insert mode
+map! <C-v> <C-r>"
 
 "Markdown to HTML
 " Convert whole page to markdown in place
@@ -112,4 +115,15 @@ map <leader>rn :call RenameFile()<cr>
 au BufRead,BufNewFile *.md,*.txt setlocal spell
 
 " Fuzzy finder: ignore stuff that can't be opened, and generated files
-let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.png,*.jpg,*.gif,*/vcr/*     " MacOSX/Linux"
+
+set cursorline
+
+" Tslime
+nmap sr <Plug>SetTmuxVars
+
+"move around your splits with ctrl hjkl which b/c capslock is assigned to ctrl works well
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l"
