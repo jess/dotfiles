@@ -84,10 +84,6 @@ set mouse=a
 set ttym=xterm2
 
 
-" use the silver searcher instead of ack
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
-
 " Vertical Lines Indentation
 let g:indent_guides_auto_colors = 0
 hi IndentGuidesOdd  ctermbg=black
@@ -123,7 +119,19 @@ set cursorline
 nmap sr <Plug>SetTmuxVars
 
 "move around your splits with ctrl hjkl which b/c capslock is assigned to ctrl works well
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l"
+"nnoremap <C-h> <C-w>h
+"nnoremap <C-j> <C-w>j
+"nnoremap <C-k> <C-w>k
+"nnoremap <C-l> <C-w>l"
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
+
+" use the silver searcher instead of ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+"split lines
+nnoremap K a<CR><Esc>
+
+set relativenumber

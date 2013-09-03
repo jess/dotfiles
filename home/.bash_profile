@@ -1,3 +1,6 @@
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+
 alias ll="ls -la"
 alias ..="cd .."
 alias ...="cd ../.."
@@ -25,6 +28,8 @@ alias tls="tmux ls"
 alias ss="vim ~/Dropbox/notes/sunday_school"
 alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
 
+#alias ri='ri -f ansi'
+
 
 #switch things in terminal
 export HISTIGNORE="fg*"
@@ -32,14 +37,13 @@ bind '"\C-f": "fg %-\n"'
 
 export EDITOR="vim"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 #show rvm and get in command line
 #if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then source `brew --prefix`/etc/bash_completion.d/git-completion.bash; fi # for Git completion
 ## from output
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
 . $(brew --prefix)/etc/bash_completion
 fi
-export PS1="\H \[\033[01;34m\]\$(~/.rvm/bin/rvm-prompt) \[\033[01;32m\]\w\[\033[00;33m\]\$(__git_ps1 \" (%s)\") \[\033[01;36m\]\$\[\033[00m\] "
+#export PS1="\H \[\033[01;34m\]\$(~/.rvm/bin/rvm-prompt) \[\033[01;32m\]\w\[\033[00;33m\]\$(__git_ps1 \" (%s)\") \[\033[01;36m\]\$\[\033[00m\] "
 
 # Define Vim wrappers which unsets GEM_HOME and GEM_PATH before
 # invoking vim and all known aliases

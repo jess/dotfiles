@@ -28,9 +28,6 @@
 [submodule "home/.janus/rspec"]
 	path = home/.janus/rspec
 	url = https://github.com/skwp/vim-rspec.git
-[submodule "home/.janus/rvm"]
-	path = home/.janus/rvm
-	url = https://github.com/tpope/vim-rvm.git
 [submodule "home/.janus/vim-textobj-rubyblock"]
 	path = home/.janus/vim-textobj-rubyblock
 	url = https://github.com/nelstrom/vim-textobj-rubyblock.git

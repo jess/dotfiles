@@ -1,3 +1,0 @@
-export rvm_path="/Users/jess/.rvm"
-rvm_project_rvmrc=1
-rvm_configure_env=(CFLAGS="-march=nocona -O2 -pipe")
