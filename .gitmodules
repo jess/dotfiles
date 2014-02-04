@@ -64,3 +64,6 @@
 [submodule "home/.janus/funcoo.vim"]
 	path = home/.janus/funcoo.vim
 	url = https://github.com/rizzatti/funcoo.vim.git
+[submodule "home/.janus/vim-yaml-flattener"]
+	path = home/.janus/vim-yaml-flattener
+	url = https://github.com/henrik/vim-yaml-flattener
