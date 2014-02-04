@@ -58,6 +58,8 @@ map <leader>mdc y:tabedit/tmp/%<cr>p:set ft=html<cr>:%!/usr/local/bin/Markdown.p
 
 " toggle for vim room (minimal writer)
 map <Leader>mz :VimroomToggle<cr>
+map <Leader>mzl :let g:vimroom_guibackground="white"<cr>
+map <Leader>mzd :let g:vimroom_guibackground="black"<cr>
 
 
 nnoremap <F2> :set invpaste paste?<CR>
@@ -80,9 +82,9 @@ vmap <Esc>A [egv
 nnoremap gm :call cursor(0, len(getline('.'))/2)<cr>
 
 " Terminal Mouse
-set mouse=a
-set ttym=xterm2
-
+"set mouse=a
+"set ttym=xterm2
+"
 
 " Vertical Lines Indentation
 let g:indent_guides_auto_colors = 0
@@ -135,3 +137,5 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 nnoremap K a<CR><Esc>
 
 set relativenumber
+
+set shell=$SHELL\ -l

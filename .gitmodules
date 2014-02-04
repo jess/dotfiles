@@ -55,3 +55,6 @@
 [submodule "home/.janus/vim-slim"]
 	path = home/.janus/vim-slim
 	url = https://github.com/slim-template/vim-slim.git
+[submodule "home/.janus/goyo.vim"]
+	path = home/.janus/goyo.vim
+	url = https://github.com/junegunn/goyo.vim.git

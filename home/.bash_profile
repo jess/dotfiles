@@ -1,49 +1,20 @@
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
 
-alias ll="ls -la"
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-# git
-alias gs="git status"
-alias gc="git commit -m"
-alias ga="git add ."
-alias gac="git add -A; git commit -m "
-alias gco="git checkout "
-alias gsummary='git log --pretty=format:"%h - %an, %ar : %s"'
-alias gcustomer='git log --pretty=format:"%s"'
-
-alias rdbm="bundle exec rake db:migrate db:test:prepare"
-alias ber="bundle exec rspec spec"
-alias hrdbm="heroku run rake db:migrate"
-alias git=hub
-alias markdown="/usr/local/bin/Markdown.pl"
-alias be="bundle exec"
-alias tn="tmux new -s"
-alias ta="tmux attach -t"
-alias tk="tmux kill-session -t"
-alias tls="tmux ls"
-
-alias ss="vim ~/Dropbox/notes/sunday_school"
-alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
-
-#alias ri='ri -f ansi'
-
+#alia ri='ri -f ansi'
 
 #switch things in terminal
-export HISTIGNORE="fg*"
-bind '"\C-f": "fg %-\n"'
-
-export EDITOR="vim"
 
 #show rvm and get in command line
 #if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then source `brew --prefix`/etc/bash_completion.d/git-completion.bash; fi # for Git completion
 ## from output
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-. $(brew --prefix)/etc/bash_completion
-fi
 #export PS1="\H \[\033[01;34m\]\$(~/.rvm/bin/rvm-prompt) \[\033[01;32m\]\w\[\033[00;33m\]\$(__git_ps1 \" (%s)\") \[\033[01;36m\]\$\[\033[00m\] "
+#export PS1="\$(chruby)\$(ruby --version) "
+#if [[ -r ./.ruby-version ]] 
+#  then
+#    export PS1="\H \[\033[01;34m\]\$(cat './.ruby-version') \[\033[01;32m\]\w\[\033[00;33m\]\$(__git_ps1 \" (%s)\") \[\033[01;36m\]\$\[\033[00m\] "
+#  else
+#    export PS1="\H \[\033[01;34m\]\$(ruby --version | cut -d' ' -f 1-2) \[\033[01;32m\]\w\[\033[00;33m\]\$(__git_ps1 \" (%s)\") \[\033[01;36m\]\$\[\033[00m\]\$(pwd) "
+#fi
+#PS1='$(ruby -e "print RUBY_VERSION") \W\$ '
 
 # Define Vim wrappers which unsets GEM_HOME and GEM_PATH before
 # invoking vim and all known aliases
@@ -70,6 +41,7 @@ vim()
     (unset GEM_PATH GEM_HOME; command vim "$@")
 }
 
+
 #define_vim_wrappers
 
 #echo "Jess is Cool.  Jesus loves you too!"
@@ -78,6 +50,3 @@ vim()
 export PATH="/usr/local/heroku/bin:$PATH"
 
 
-### Ruby performance
-export RUBY_GC_MALLOC_LIMIT=60000000
-export RUBY_FREE_MIN=200000
