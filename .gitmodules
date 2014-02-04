@@ -61,3 +61,6 @@
 [submodule "home/.janus/dash.vim"]
 	path = home/.janus/dash.vim
 	url = https://github.com/rizzatti/dash.vim.git
+[submodule "home/.janus/funcoo.vim"]
+	path = home/.janus/funcoo.vim
+	url = https://github.com/rizzatti/funcoo.vim.git
