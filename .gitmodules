@@ -58,3 +58,6 @@
 [submodule "home/.janus/goyo.vim"]
 	path = home/.janus/goyo.vim
 	url = https://github.com/junegunn/goyo.vim.git
+[submodule "home/.janus/dash.vim"]
+	path = home/.janus/dash.vim
+	url = https://github.com/rizzatti/dash.vim.git
