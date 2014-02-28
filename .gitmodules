@@ -67,3 +67,6 @@
 [submodule "home/.janus/vim-yaml-flattener"]
 	path = home/.janus/vim-yaml-flattener
 	url = https://github.com/henrik/vim-yaml-flattener
+[submodule "home/.janus/linediff.vim"]
+	path = home/.janus/linediff.vim
+	url = https://github.com/AndrewRadev/linediff.vim.git

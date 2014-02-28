@@ -8,4 +8,5 @@
 - http://gems.github.com
 :update_sources: true
 :verbose: true
-gem: --no-rdoc
+#gem: --no-rdoc --ro-ri
+gem: --no-document

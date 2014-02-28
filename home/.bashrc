@@ -14,10 +14,6 @@ fi
 
 export PS1="\H \[\033[01;34m\]\$(ruby --version | cut -d' ' -f 1-2) \[\033[01;32m\]\w\[\033[00;33m\]\$(__git_ps1 \" (%s)\") \[\033[01;36m\]\$\[\033[00m\] "
 
-### Ruby performance
-export RUBY_GC_MALLOC_LIMIT=60000000
-export RUBY_FREE_MIN=200000
-
 ### Added by the Heroku Toolbelt
 export PATH="./.bundle/bin:/usr/local/heroku/bin:$PATH"
 
