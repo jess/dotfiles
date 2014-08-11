@@ -70,3 +70,6 @@
 [submodule "home/.janus/linediff.vim"]
 	path = home/.janus/linediff.vim
 	url = https://github.com/AndrewRadev/linediff.vim.git
+[submodule "home/.janus/vim-dispatch.git"]
+	path = home/.janus/vim-dispatch.git
+	url = git://github.com/tpope/vim-dispatch.git
