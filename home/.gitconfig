@@ -1,0 +1,29 @@
+[user]
+	name = Jess Brown
+	email = jess@brownwebdesign.com
+[merge]
+    tool = vimdiff
+[mergetool "vim"]
+    cmd = /usr/bin/vim -d -g "$LOCAL" "$MERGED" "$REMOTE"
+      keepBackup = false
+        trustExitCode = false
+[github]
+	user = jess
+	token = 8aaeca4ef8535605f8e056d885917b5e
+[alias]
+  l = "!. ~/.githelpers && pretty_git_log"
+  co = "checkout"
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/jess/.gitignore_global
+#[difftool "sourcetree"]
+#	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+#	path = 
+#[mergetool "sourcetree"]
+#	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+#	trustExitCode = true
