@@ -19,7 +19,10 @@ colorscheme solarized
 
 " Esc Key Re map
 inoremap jj <Esc>
-nnoremap ; :
+"nnoremap ; :
+
+" able to edit crontab files
+autocmd filetype crontab setlocal nobackup nowritebackup
 
 
 au BufRead,BufNewFile *.php set filetype=php.html
@@ -36,6 +39,8 @@ set autoread
 map <leader>c :ColorHEX<cr>
 let g:NERDTreeMouseMode=1
 map <leader>v ^vg_
+" select paragraph and reformat
+map <leader>al vipgq
 map <leader>pp ^vg_S<p><cr>
 map <leader>li ^vg_S<li><cr>
 map! <leader>sp &nbsp;
@@ -47,6 +52,7 @@ map <Leader>cao :tabonly<cr> :only<cr>
 map <Leader>nt :tabnew<cr>
 " Ctrl v to paste whil in insert mode
 map! <C-v> <C-r>"
+map <leader>gy :Goyo<cr>
 
 "Markdown to HTML
 " Convert whole page to markdown in place
@@ -138,4 +144,9 @@ nnoremap K a<CR><Esc>
 
 set relativenumber
 
-set shell=$SHELL\ -l
+" not sure what this does, but it slows down vim extreme
+"set shell=$SHELL\ -l
+
+let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files . -co --exclude-standard']
+
+set nobackup
