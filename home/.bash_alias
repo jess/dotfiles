@@ -1,0 +1,32 @@
+alias ll="ls -la"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias st="git status"
+alias gc="git commit -m"
+alias ga="git add ."
+alias gac="git add -A; git commit -m "
+alias gco="git checkout "
+alias gpull="git pull origin master"
+alias gcedit="git commit --amend -m "
+alias gsummary='git log --pretty=format:"%h - %an, %ar : %s"'
+alias gcustomer='git log --pretty=format:"%s"'
+alias rdbm="bundle exec rake db:migrate db:test:prepare"
+alias ber="clear; bundle exec rspec spec"
+alias bsetup="export PATH=\"./.bundle/bin:$PATH\""
+alias bi='bundle install --path .bundle/gems --binstubs .bundle/bin'
+alias hrdbm="heroku run rake db:migrate"
+alias git=hub
+alias markdown="/usr/local/bin/Markdown.pl"
+alias be="bundle exec"
+alias tn="tmux new -s"
+alias ta="tmux attach -t"
+alias tk="tmux kill-session -t"
+alias tls="tmux ls"
+alias ss="vim ~/Dropbox/notes/sunday_school/2016"
+alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc"
+
+## CD ##
+alias bwd="cd ~/Dropbox/websites/brownwebdesign.com/brownwebdesign && tmux"
+
+alias mvim="/usr/local/Cellar/macvim/7.4-76/MacVim.app/contents/MacOS/MacVim"
